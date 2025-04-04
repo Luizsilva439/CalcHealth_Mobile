@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     styleText: {
         fontSize: 24,
-        color: "#0aefff",
+        color: "#ff0084",
         fontWeight: "bold",
         paddingVertical: 20,
         textAlign: "center",
