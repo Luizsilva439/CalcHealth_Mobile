@@ -6,7 +6,7 @@ export default function ResultImc(props) {
   return (
     <View style={{alignItems: "center"}}>
         <Text style={styles.textResultImc}>{props.masageResultImc}</Text>
-        <Text style={styles.textResultImc}>{props.resultImc}</Text>
+        <Text style={styles.ResultImc}>{props.resultImc}</Text>
     </View>
   );
 }

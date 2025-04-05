@@ -7,6 +7,13 @@ const style = StyleSheet.create({
         color: "#ff0084",
         fontWeight: "bold",
         marginTop: 20,
+    },
+    
+    ResultImc: {
+        fontSize:40,
+        color: "#ff0084",
+        fontWeight: "bold",
+        marginTop: 5,
     }
 });
 
