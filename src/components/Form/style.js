@@ -39,6 +39,13 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         width: "90%",
         marginLeft: 20,
+    },
+
+    textComponentImc: {
+        fontSize: 10,
+        color: "#ff0000",
+        fontWeight: "bold",
+        marginStart: 40,
     }
 
  

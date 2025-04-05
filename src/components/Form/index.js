@@ -10,10 +10,17 @@ const [weight, setWeight] = useState(null);
 const [massageImc, setMassageImc] = useState("Preencha peso e altura");
 const [imc, setImc] = useState(null);
 const [textButton, setTextButton] = useState("Calcular");
-
+const [componentimc, setComponentImc] = useState(null);
 
 function imcCalculator() {
   return setImc((weight / (height * height)).toFixed(2));
+}
+
+function verificationComponentImc(){
+  if (imc == null){
+    setComponentImc("*campo obrigatório*");
+  }
+
 }
 
 function validationImc() {
@@ -23,8 +30,10 @@ function validationImc() {
     setWeight(null);
     setTextButton("Calcular Novamente");
     setMassageImc("Seu IMC é igual: ");
+    setComponentImc(null);
   } else {
     setImc(null);
+    verificationComponentImc();
     setTextButton("Calcular");
     setMassageImc("Preencha peso e altura");
   }
@@ -33,7 +42,10 @@ function validationImc() {
   return (
     <View style={styles.boxContent}>
         <View>
+          
             <Text style={styles.text}>Altura</Text>
+            <Text style={styles.textComponentImc}>{componentimc}</Text>
+       
             <TextInput
             style={styles.inputText}
             onChangeText={setHeight}
@@ -41,7 +53,10 @@ function validationImc() {
             placeholder="Ex: 1.75"
             keyboardType="numeric"
             />
+
             <Text style={styles.text}>Peso</Text>
+            <Text style={styles.textComponentImc}>{componentimc}</Text>
+            
             <TextInput
             style={styles.inputText}
             onChangeText={setWeight}
